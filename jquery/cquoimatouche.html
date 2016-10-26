@@ -1,0 +1,14 @@
+<form>
+  Laissez aller votre imagination : saisissez quelques mots<br />
+  <textarea id="saisie"></textarea>
+</form><br />
+Caractère saisi : <span id="unelettre"></span>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+  $(function() {
+    $('#saisie').keypress(function(e) {
+      $('#unelettre').text(e.which);  //keyCode
+    });
+  });
+</script>

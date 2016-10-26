@@ -1,0 +1,23 @@
+<style type="text/css">
+  img { position: absolute; left: 0px; top: 0px; }
+  #img1 {z-index: 1;}
+  #img2 {z-index: 2;}
+  #img3 {z-index: 3;}
+  #img4 {z-index: 4;}
+  #img5 {z-index: 5;}
+</style>
+
+<img src="psy1.png" id="img5">
+<img src="psy2.jpeg" id="img4">
+<img src="psy3.jpeg" id="img3">
+<img src="psy4.jpeg" id="img2">
+<img src="psy5.jpeg" id="img1">
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+  $(function() {
+    $('img').first().fadeOut(2000, function suivante() {
+        $(this).next('img').fadeOut(2000,suivante);
+    });
+  });
+</script>

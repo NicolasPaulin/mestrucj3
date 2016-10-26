@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sélecteurs CSS</title>
+  </head>
+  <body>
+    <form>
+      Nom d'utilisateur
+      <input type="text" id="nom"><br />
+
+      Mot de passe
+      <input type="password" id="pass"><br />
+
+      Sexe
+      H <input type="radio" id="H" name="sexe" value="H">
+      F <input type="radio" id="F" name="sexe" value="F"><br />
+
+      Fonction
+      <select id="fonction">
+        <option VALUE="etudiant">Etudiant</option>
+        <option VALUE="ingenieur">Ingénieur</option>
+        <option VALUE="enseignant">Enseignant</option>
+        <option VALUE="retraite">Retraité</option>
+        <option VALUE="autre">Autre</option>
+      </select><br /><br />
+
+      <input type="submit" id="envoyer" value="Envoyer">
+      <input type="reset" id="annuler" value="Annuler">
+    </form>
+
+    <script src="jquery.js"></script>
+    <script>
+      $(function() {
+        // Entrer les instructions jQuery ici
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page title</title>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <p>Page content here</p>
+        <p>Premier texte</p> <!-- sélectionné  $("p:first")-->
+        <p>Deuxième texte</p><!-- sélectionné  $("p:eq(1)")-->
+        <p>Troisième texte</p><!-- sélectionné $("p:last")-->
+        <ol>
+            <li>Premier élément</li> <!-- sélectionné $("ol > li")-->
+            <li>Second élément</li> <!-- sélectionné $("ol > li") -->
+            <ul><!-- sélectionné $("ul:gt(0)") -->
+                <li>Élément sans ordre</li>
+            </ul>
+        </ol>
+        <ul><!-- sélectionné $("li:lt(1)")) -->
+            <li id="premier">Un</li> <!-- sélectionné $("li#premier") -->
+            <li id="deuxième">Deux</li> <!-- sélectionné $("li#premier ~ li")-->
+            <li id="troisième">Trois</li> <!-- sélectionné $("li#premier ~ li")-->
+        </ul>
+        <ul id="courses"><!-- sélectionné $("ul:gt(0)") -->
+            <li class="legume">Aubergine</li>
+            <li class="legume">Carotte</li>
+            <li class="fruit">Pomme</li> <!-- sélectionné  $("li:not('.legume')")-->
+        </ul>
+        <h1> coucou</h1>
+
+        <!-- on inclut jQuery via CDN -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <!-- votre propre fichier dans le dossier de votre projet -->
+        <script src="js/monjs.js"></script>
+    </body>
+</html>
