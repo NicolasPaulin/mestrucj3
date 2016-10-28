@@ -33,9 +33,6 @@ $manager->add($personnage2);
 
 echo 'insertion réussis <br/>';
 
-$manager->setDb($db);
-echo 'on enregistre <br/>';
-
 $request = $db->query('SELECT id, nom, forcePerso, degats, niveau, experience FROM personnages');
 
 echo 'requete non planté <br/>';
