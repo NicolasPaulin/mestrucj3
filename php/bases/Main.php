@@ -23,7 +23,7 @@ $personnage2 = new Personnage([
   'experience' => 50
 ]);
 
-$db = new PDO('mysql:host=localhost:8889;dbname=test', 'root', 'root');
+$db = new PDO('mysql:host=localhost;dbname=test', 'root', 'root');
 
 
 $manager = new PersonnagesManager($db);
@@ -32,6 +32,9 @@ $manager->add($personnage);
 $manager->add($personnage2);
 
 echo 'insertion réussis <br/>';
+
+$manager->setDb($db);
+echo 'on enregistre <br/>';
 
 $request = $db->query('SELECT id, nom, forcePerso, degats, niveau, experience FROM personnages');
 
